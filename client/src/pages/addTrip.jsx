@@ -14,8 +14,8 @@ const AddTrip = () => {
         <label htmlFor="endDate">End Date:</label>
         <input type="date" name="endDate" required />
 
-        <label htmlFor="entry">Journal Entry:</label>
-        <textarea name="entry" required></textarea>
+        <label htmlFor="journalEntry">Journal Entry:</label>
+        <textarea name="journalEntry" required>Add entry here!</textarea>
 
         <button type="submit">Add Trip</button>
       </form>
