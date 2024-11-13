@@ -1,0 +1,19 @@
+.card {
+    /*
+      - Make the card minimum height 150px
+      - Add solid orange border of 2px 
+      - Add round corners with border radius 
+      - Add box shadow for a more dynamic look
+      - Add 0.2s transition speed for hover animation
+    */
+  }
+  
+  .card:hover {
+    /* Enlarge card on hover */
+  }
+  
+  .cardContent {
+    /* 
+      - Add some margin to the top 
+    */
+  }

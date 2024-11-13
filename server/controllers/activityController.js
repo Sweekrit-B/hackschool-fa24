@@ -1,36 +1,21 @@
-const getActivity = async (req, res) => {
-    const activity = [
-        {
-            destination: 'Paris',
-            activitySpot: 'Louvre Museum',
-            rating: '4',
-            review: 'Visiting the Louvre was an unforgettable experience!'
-        }
-    ];
+const Activities = require("../models/activityModel");
 
-    res.status(200).json(activity);
+// Create a GET async function to get all activities using the activity model schema
+const getActivity = async (req, res) => {
+    // Only get destination from trip
 }
 
+// Create a POST async function to add an activity using the activity model schema
 const postActivity = async (req, res) => {
-    /*
-    This controller should retrieve the activity object from the request body (req.body.activity).
-    Check for the following properties: destination, activitySpot,rating.
-    See if destination, activitySpot, and rating exist.
-    If not, send an error response back to the client.
-    Otherwise, send a success response back to the client.
-    Return a JSON object containing the activity data.
-    */
-    const activity = req.body.activity;
+    // Extracts specific fields from the request body of our activity model schema
+    
+    
+    // Check for missing required fields and return an error if any required field is absent
 
-    if (!activity) {
-        return res.status(400).json({ message: "Activity data is missing from request body." });
-    }
+    // Creates a tripId associated with this activity
+    const tripId = mongoose.Types.ObjectId.createFromHexString(trip);
 
-    if (!activity.destination || !activity.activitySpot || !activity.rating) {
-        return res.status(400).json({message: `Enter in all the activity parameters.`});
-    }
-    return res.status(200).json(activity);
-
+    // Create a new activity entry in the database and return it as a JSON response
 }
 
 module.exports = { getActivity, postActivity };
