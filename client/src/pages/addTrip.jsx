@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import styles from "../styles/TripForm.module.css";
 
 const AddTrip = () => {
@@ -6,6 +7,7 @@ const AddTrip = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [entry, setEntry] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     //Prevent the form reloading
@@ -22,6 +24,8 @@ const AddTrip = () => {
       endDate: formattedEndDate,
       journalEntry: entry,
     });
+
+    router.push("/");
   };
 
   return (
