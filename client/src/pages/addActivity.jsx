@@ -17,7 +17,7 @@ const AddActivity = () => {
   const [activity, setActivity] = useState("");
   const [rating, setRating] = useState("");
   const [review, setReview] = useState("");
-  router = useRouter();
+  const router = useRouter();
 
   //Uses the Axios API calls to fetch trip information
   const fetchTrips = async () => {
