@@ -22,8 +22,6 @@ const AddTrip = () => {
       endDate: formattedEndDate,
       journalEntry: entry,
     });
-
-    router.push("/");
   };
 
   return (
